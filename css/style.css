@@ -1,0 +1,695 @@
+/* --- ОБЩИЕ СВОЙСТВА (начало) --- */
+body {
+    background-color: #F4F6FB;
+    font-family: 'Ubuntu', 'Tahoma', sans-serif;
+}
+
+.logo {
+    width: 191px;
+    height: 73;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* --- */
+.mainbutton {
+	display: inline-block;
+	
+	position: relative;
+	margin-right: 0;
+	padding: 20px 50px;
+	
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF; 
+	
+	border-radius: 30px;
+	
+	background-color: #EF5E42;
+}
+
+.mainbutton:hover {
+	color: #FFFFFF; 
+	background-color: #ef8042;
+}
+
+.mainbutton:active {
+	background-color: #B54029;
+}
+
+.mainbutton::before {
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	display: inline-block;
+	content: "";
+	
+	width: 100%;
+	height: 100%;
+	border: 2px solid #041032;
+	border-radius: 30px;
+	
+ 	transform: rotate(-3deg);
+	
+	transition: all 0.25s;
+}
+
+.mainbutton:hover::before {
+	transform: rotate(3deg);
+}
+
+.mainbutton:active::before {
+	transform: rotate(0deg);
+}
+
+/* --- Кнопка PLAY (начало) --- */
+.button-play {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	margin-left: 33px;
+	
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: #041032;
+}
+
+.button-play-img {
+	position: relative;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	
+	margin-right: 18px;
+	
+	background-color: #88CAFF;
+	border-radius: 50%;
+	background-image: url('../img/btn-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 55% 50%;
+
+	z-index: 4;
+}
+
+.button-play-img:hover {
+	background-color: #ef8042;
+}
+
+.button-play-img:active {
+	background-color: #B54029;
+}
+
+.button-play-img.button-play-img-promo:hover {
+	background-color: #5cb3fa;
+}
+
+.button-play-img.button-play-img-promo:active {
+	background-color: #2c9ffc;
+}
+
+.button-play-img::before {
+	box-sizing: border-box;
+	display: inline-block;
+	
+	position: absolute;
+	left: -6px;
+	bottom: 0;
+	
+	content: "";
+	
+	width: 72.77px;
+	height: 56.27px;
+	
+	border: 2px solid #041032;
+	border-radius: 50%;
+	
+	transform: rotate(10.67deg);
+	
+	transition: all 0.25s;
+}
+
+.button-play-img:active::before {
+	width: 100%;
+	height: 100%;
+
+	left: 0;
+	transform: rotate(0deg);
+}
+
+.button-play-img:hover::before {
+	transform: rotate(-10.67deg);
+}
+
+.button-play-text:hover {
+    color: #EF5E42;
+	transition: all 0.5s;
+}
+/* --- Кнопка PLAY (конец) --- */
+/* --- ОБЩИЕ СВОЙСТВА (конец) --- */
+
+
+
+/* --- HEADER (начало) --- */
+.header.container {
+    padding: 34px 15px 46px;
+}
+
+.header-menu {
+	list-style-type: none;
+}
+/* не понимаю как прописать вектор для portfolio в меню */
+.header-portfolio-vector {
+	position: relative;
+	background-image: url('../img/header-portfolio-vector.svg');
+	background-repeat: no-repeat;
+	align-items: center;
+	/* transform: rotate(2.93deg); */
+
+/* left: 0px;
+	top: 0px;  */
+
+	/* width: 52px;
+	height: 12px; */
+}
+
+.header-menu-link {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 150%;
+    text-align: left;
+    color: #4050A5;
+
+    transition: all 0.25s;
+}
+
+.header-menu-link:hover {
+    color: #EF5E42;
+}
+
+.header-menu-btn {
+    position: relative;
+	left: -15px;
+
+    width: 30px;
+    height: 20px;
+    border: none;
+
+    background-color: transparent;
+}
+
+.header-menu-btn::before,
+.header-menu-btn::after {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: "";
+    background-color: #041032;
+}
+
+.header-menu-btn::before {
+    top: 0;
+}
+
+.header-menu-btn::after {
+    bottom: 0;
+}
+
+.header-menu-btn span {
+    position: absolute;
+    left: 0;
+    top: 9px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: black;
+}
+/* --- HEADER (конец) --- */
+
+
+
+/* --- Секция PORTFOLIO (начало) --- */
+.portfolio {
+	min-height: 1518px;
+}
+
+.portfolio-title {
+	margin: 0;
+	margin-top: 86.5px;
+
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 42px;
+	color: white;
+}
+
+.portfolio-list {
+	margin: 0;
+	margin-top: 45px;
+}
+
+.portfolio .container::before {
+	display: table;
+	content: "";
+}
+
+.portfolio-item {
+	margin-bottom: 30px;
+	width: 411px;
+	height: 357px;
+
+	border-radius: 10px;
+}
+
+.portfolio-content {
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+
+.portfolio-content .button-play {
+	position: relative;
+}
+
+.portfolio-content .button-play::after {
+	box-sizing: border-box;
+	display: block;
+
+	position: absolute;
+	top: -1px;
+    left: -15px;
+
+	width: 90px;
+	height: 90px;
+	border: 1px solid #EF5E42;
+	border-radius: 50%;
+
+	content: "";
+	opacity: 0.33;
+}
+
+.button-play-img-portfolio {
+	background-color: #EF5E42;
+}
+
+.portfolio-description {
+	margin-left: 10px;
+}
+
+.portfolio-header {
+	margin-bottom: 10px;
+	
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 20px;
+	color: #4050A5;
+}
+
+.portfolio-text {
+	margin-top: 10px;
+	
+	font-family: 'Roboto', 'Tahoma', sans-serif;
+	font-size: 20px;
+	line-height: 150%;
+	color: #041032;
+}
+
+.portfolio-photo-1 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat  bottom,
+				url('../img/portfolio/photo-1.svg') no-repeat top;
+}
+
+.portfolio-photo-2 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-2.svg') no-repeat top;
+}
+
+.portfolio-photo-3 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-3.svg') no-repeat top;
+}
+
+.portfolio-photo-4 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-4.svg') no-repeat top;
+}
+
+.portfolio-photo-5 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-5.svg') no-repeat top;
+}
+
+.portfolio-photo-6 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-6.svg') no-repeat top;
+}
+
+.portfolio-photo-7 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-7.svg') no-repeat top;
+}
+
+.portfolio-photo-8 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-8.svg') no-repeat top;
+}
+
+.portfolio-photo-9 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-9.svg') no-repeat top;
+}
+
+.portfolio-photo-10 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-10.svg') no-repeat top;
+}
+
+.portfolio-photo-11 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-11.svg') no-repeat top;
+}
+
+.portfolio-photo-12 {
+	background: url('../img/portfolio/portfolio-item-bg.svg') no-repeat bottom,
+				url('../img/portfolio/photo-12.svg') no-repeat top;
+}
+
+.portfolio-item-more {
+	position: relative;
+	
+	width: 410px;
+	height: 357px;
+
+	background-color: white;
+	background-image: url('../img/portfolio/more-item-decor.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 53%;
+	
+	border-radius: 10px;
+}
+
+.button-play::before {
+	display: table;
+	content: "";
+}
+
+.button-play-img-more::after {
+	box-sizing: border-box;
+
+	position: absolute;
+	top: -100px;
+    left: -142px;
+
+    width: 363px;
+    height: 357px;
+	border: 2px solid #041032;
+	border-radius: 10px;
+    
+	content: "";
+
+	transform: rotate(1.16deg);
+
+	transition: all 0.5s;
+}
+
+.button-play-img-more:hover::after {
+	transform: rotate(0);
+}
+
+.button-play-more {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	margin-top: 100px;
+	margin-left: 0;
+}
+
+.button-play-img-more {
+	position: relative;
+
+	background-color: #EF5E42;
+	background-image: url('../img/portfolio/Plus.svg');
+	background-position: center;
+}
+
+.portfolio-more-text {
+	margin-top: 24px;
+
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 24px;
+	text-transform: capitalize;
+	color: #041032;
+}
+
+.button-play-more:hover .portfolio-more-text {
+	color: #EF5E42;
+}
+/* --- Секция PORTFOLIO (конец) --- */
+
+
+
+/* --- FOOTER (начало) --- */
+footer {
+	margin-top: 20px;
+	min-height: 596px;
+
+	background: url('../img/footer-bg.svg') no-repeat bottom;
+}
+
+.footer-form {
+	box-sizing: border-box;
+
+	width: 1290px;
+	min-height: 280px;
+	padding-left: 105px;
+	padding-right: 145px;
+	
+	background-image: url('../img/form-bg.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.footer-form-header {
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 42px;
+	color: #041032;
+}
+
+.footer-form-text {
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 24px;
+	line-height: 150%;
+	color: #041032;
+}
+
+.footer-form .mainbutton {
+	position: relative;
+	z-index: 4;
+}
+
+.footer-bottom {
+    padding: 80px 60px;
+}
+
+.footer-form .button::after {
+	display: block;
+
+	position: absolute;
+	top: -32px;
+    left: -20px;
+	z-index: 1;
+
+	width: 280px;
+	height: 110px;
+
+	content: "";
+	background-image: url('../img/footer/footer-button-decor.svg');
+}
+
+.footer-social {
+	margin: 0;
+	margin-bottom: 52px;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.footer-social li:first-child {
+	margin-right: 35px;
+} 
+
+.youtube {
+	display: block;
+	width: 78px;
+}
+
+.linkedin {
+	display: block;
+	width: 78px;
+}
+
+.facebook {
+	display: block;
+	width: 78px;
+}
+
+.footer-copy {
+	margin: 0;
+
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 17px;
+	color: #F4F6FB;
+}
+
+.footer-bottom-right {
+	padding-top: 32px;
+} 
+
+.footer-bottom-right::after {
+	display: table;
+	content: "";
+}
+
+.footer-email {
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	color: #88CAFF;
+}
+
+.footer-links {
+	margin-top: 40px;
+}
+
+.footer-links a {
+	margin-left: 35px;
+
+	font-family: 'Ubuntu', 'Verdana', sans-serif;
+	font-size: 17px;
+	color: #F4F6FB;
+
+	transition: all 0.5s;
+}
+
+.footer-links a:hover {
+	color: #EF5E42;
+}
+/* --- FOOTER (конец) --- */
+
+
+
+/* --- МЕДИА-ЗАПРОСЫ (начало) --- */
+ @media (min-width: 1200px) {
+    .container {
+        max-width: 1290px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-form {
+		background-image: url('../img/form-bg.svg');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+        padding-left: 67px;
+        padding-right: 74px;
+	}
+
+	.footer-bottom {
+		padding: 80px 19px;
+	}
+
+	.footer-social li:first-child {
+		margin-right: 6px;
+	}
+}
+
+@media (max-width: 999px) {
+    .logo {
+        width: 125px;
+        height: 47px;
+    }
+
+    .portfolio {
+		background-image: url('../img/portfolio-bg.svg');
+		background-size: cover;
+		background-position: top;
+	}
+
+	.portfolio-content .button-play-img {
+		position: relative;
+		top: -11px;
+    	left: -10px;
+
+		width: 45px;
+		height: 45px;
+
+		background-size: 30%;
+	}
+
+	.portfolio-content .button-play-img::before {
+		bottom: 0;
+		left: -4px;
+
+		width: 53px;
+		height: 41px;
+	}
+
+	.portfolio-content .button-play::after {
+		top: 0px;
+		left: -20px;
+
+		width: 65px;
+		height: 65px;
+	}
+	
+	footer {
+		background: url('../img/footer-bg.svg') top / cover;
+	} 
+
+	.footer-form {
+		background-size: auto;
+		background-position: 0 0;
+	}
+}
+
+@media (max-width: 767px) {
+    .header-menu {
+        padding: 0;
+    }
+
+    .header-menu li:last-child {
+		margin-left: 40px;
+	}
+
+    .portfolio-content {
+		margin-left: 10%;
+	}
+
+	.footer-form {
+		margin: auto;
+		padding: 0;
+		align-content: center;
+		background-position: center;
+	}
+}
+
+@media (max-width: 479px) {
+    .footer-form-header {
+		font-size: 32px;
+	}
+}
+/* --- МЕДИА-ЗАПРОСЫ (конец) --- */
